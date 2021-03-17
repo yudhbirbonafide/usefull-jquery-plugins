@@ -17,14 +17,21 @@
 
   <div id="weekpicker"></div>
   <div class="">Week starting: <b id="week-start"></b></div>
+  <pre>
+    To use in dynamic code setup for every week of month
+    <?php
+    $dt = new DateTime('second Monday of this month');
+    echo $dt->format('m/d/Y');
+    ?>
+  </pre>
 
   <script src="../vendor/jquery-1.11.1.js"></script>
   <script src="../vendor/jquery-ui-1.10.4.js"></script>
   <script src="jquery-weekpicker.js"></script>
   <script>
     $(function() {
-      var dateText = '05/26/2018',
-        display = $('#week-start');
+      var dateText = '03/08/2021',
+      display = $('#week-start');
       display.text(dateText);
       $('#weekpicker').weekpicker({
         currentText: dateText,
